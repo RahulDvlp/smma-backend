@@ -10,6 +10,10 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
+app.get("/", function (req, res) {
+  res.status(200).json("server started");
+});
+
 app.listen(PORT, () => {
   console.log("server started on port " + PORT);
 });
